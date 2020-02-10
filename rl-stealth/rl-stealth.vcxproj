@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="plugin.cpp" />
-    <ClCompile Include="winapi.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\plugin\bakkesmodplugin.h" />
@@ -240,7 +239,6 @@
     <ClInclude Include="..\bakkesmod-sdk\include\utils\observer.h" />
     <ClInclude Include="..\bakkesmod-sdk\include\utils\parser.h" />
     <ClInclude Include="plugin.hpp" />
-    <ClInclude Include="winapi.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
