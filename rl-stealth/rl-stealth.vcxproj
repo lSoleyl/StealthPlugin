@@ -240,6 +240,23 @@
     <ClInclude Include="..\bakkesmod-sdk\include\utils\parser.h" />
     <ClInclude Include="plugin.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="rl-stealthplugin.set">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY /Y "%(FullPath)" "E:\Program Files\Steam\SteamApps\common\rocketleague\Binaries\Win32\bakkesmod\plugins\settings\"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying settings file</Message>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='NoOptimize|Win32'">COPY /Y "%(FullPath)" "E:\Program Files\Steam\SteamApps\common\rocketleague\Binaries\Win32\bakkesmod\plugins\settings\"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='NoOptimize|Win32'">Copying settings file</Message>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='NoOptimize|Win32'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY /Y "%(FullPath)" "E:\Program Files\Steam\SteamApps\common\rocketleague\Binaries\Win32\bakkesmod\plugins\settings\"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying settings file</Message>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Program Files\Steam\SteamApps\common\rocketleague\Binaries\Win32\bakkesmod\plugins\settings\%(Identity)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='NoOptimize|Win32'">E:\Program Files\Steam\SteamApps\common\rocketleague\Binaries\Win32\bakkesmod\plugins\settings\%(Identity)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Program Files\Steam\SteamApps\common\rocketleague\Binaries\Win32\bakkesmod\plugins\settings\%(Identity)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

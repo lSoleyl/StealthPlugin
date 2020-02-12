@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="bakkesmod-sdk">
       <UniqueIdentifier>{1c07f954-5a64-465a-836a-983e5685e677}</UniqueIdentifier>
     </Filter>
@@ -48,6 +44,9 @@
     </Filter>
     <Filter Include="bakkesmod-sdk\utils">
       <UniqueIdentifier>{158c10a2-2af1-4512-ac93-5b91021c8fa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Settings">
+      <UniqueIdentifier>{de324f56-1d35-47ae-ab1d-b28ed1b356a8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -347,5 +346,10 @@
     <ClInclude Include="..\bakkesmod-sdk\include\utils\parser.h">
       <Filter>bakkesmod-sdk\utils</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rl-stealthplugin.set">
+      <Filter>Settings</Filter>
+    </None>
   </ItemGroup>
 </Project>

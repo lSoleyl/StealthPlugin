@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-BAKKESMOD_PLUGIN(StealthPlugin, "Stealth Cars", "0.1", PLUGINTYPE_FREEPLAY | PLUGINTYPE_CUSTOM_TRAINING)
+BAKKESMOD_PLUGIN(StealthPlugin, "RL Stealth", "0.1", PLUGINTYPE_FREEPLAY | PLUGINTYPE_CUSTOM_TRAINING)
 
 
 // Debugging helper
@@ -50,7 +50,7 @@ void StealthPlugin::onTick() {
 
 
 void StealthPlugin::onLoad() {
-  //TODO: find out how add a neat little plugin UI for configuring these values
+  //TODO: I should add a variable to toggle the plugin and to set the boost range
 
   // Register cvar to make the boost threshold configurable
   auto cvar = cvarManager->registerCvar("stealth_boost_threshold", "75", "Stealth activates if boost is at least at this value", true, true, 0.0f, true, 100.0f, true);
