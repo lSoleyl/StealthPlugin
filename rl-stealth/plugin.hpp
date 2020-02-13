@@ -33,5 +33,17 @@ private:
    */
   bool shouldApplyStealth() const;
 
-  std::shared_ptr<int> boostThresholdCVar;
+  /** Used to update the boostRange member from the new cvar's value
+   */
+  void updateBoostRange(const std::string& rangeValue);
+
+  // Apply stealth if boost is inside this range (both ends are inclusive)
+  // The values are normed between 0 and 1 for simpler computation
+  std::pair<float, float> boostRange;
+
+  // Tick duration in seconds if plugin is active and in a locally hosted lobby
+  static const float ACTIVE_TICK_DURATION;
+
+  // Tick duration in seconds if plugin is active, but not in a suitable game lobby
+  static const float IDLE_TICK_DURATION;
 };
