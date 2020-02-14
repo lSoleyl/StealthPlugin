@@ -16,6 +16,7 @@ public:
   virtual void onUnload() override;
 
 private:
+  
   /** Will setup a timeout loop to repeatedly call itself an check the stealth
    *  conditions for each car in a regular interval.
    */
@@ -28,6 +29,12 @@ private:
    */
   void applyStealth();
 
+  /** Sets all cars visible. This is called just when the onTick() loop is stopped 
+   *  by setting stealth_enabled = 0 midgame.
+   *  The car visibility is only changed if this is a locally hosted match.
+   */
+  void showAllCars();
+
   /** Stealth should only be applied in locally hosted private matches. This 
    *  method returns true for locally hosted matches (not training).
    */
@@ -37,9 +44,21 @@ private:
    */
   void updateBoostRange(const std::string& rangeValue);
 
+  /** Updates the plugin's enabled state according to the cvar's current value 
+   *  This will start/stop the onTick timeout loop if necessary
+   */
+  void updateEnabledState(bool enabled);
+
   // Apply stealth if boost is inside this range (both ends are inclusive)
   // The values are normed between 0 and 1 for simpler computation
   std::pair<float, float> boostRange;
+
+
+  /** State enum to properly handle the plugin statethe plugin and to not accidentially
+   *  start multiple timeouts when disabling/enabling the plugin quickly.
+   */
+  enum class State { STOPPED, RUNNING, STOP_REQUESTED } state;
+  
 
   // Tick duration in seconds if plugin is active and in a locally hosted lobby
   static const float ACTIVE_TICK_DURATION;
