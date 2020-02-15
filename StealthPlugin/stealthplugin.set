@@ -1,0 +1,5 @@
+Stealth plugin
+1|Plugin active|stealth_enabled
+3|Enable Stealth if boost is in this range|stealth_boost_range|0|100
+8|
+9|Made by lSoleyl

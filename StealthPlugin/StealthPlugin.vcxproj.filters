@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="bakkesmod-sdk">
+      <UniqueIdentifier>{1c07f954-5a64-465a-836a-983e5685e677}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod">
+      <UniqueIdentifier>{c735c785-354f-4180-825c-c26c0a4c0eaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod\plugin">
+      <UniqueIdentifier>{90037ecb-611f-4e85-8ced-1e180bbab80c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod\wrappers">
+      <UniqueIdentifier>{c889cf64-a8e7-4d6d-8588-e1e6760ab7c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod\wrappers\Engine">
+      <UniqueIdentifier>{e5dddf06-dce6-4f0b-8d71-4d6af6b28a74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod\wrappers\GameEvent">
+      <UniqueIdentifier>{aff6ecb5-c0a0-44d8-92c1-ca4e84150590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod\wrappers\GameEvent\SaveData">
+      <UniqueIdentifier>{05a6eea0-ac48-46ae-881e-8b7d916ba5c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod\wrappers\GameObject">
+      <UniqueIdentifier>{5458db29-3df9-4e73-b865-75bcaf648e70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent">
+      <UniqueIdentifier>{ecccc3c9-7a18-4fb2-a071-5f6412a22714}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod\wrappers\GameObject\PerformanceStats">
+      <UniqueIdentifier>{19431426-b111-4c45-82e2-b06fe242ed01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent">
+      <UniqueIdentifier>{1b266700-67b8-4bde-b1f7-159300f33532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bakkesmod-sdk\utils">
+      <UniqueIdentifier>{158c10a2-2af1-4512-ac93-5b91021c8fa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Settings">
+      <UniqueIdentifier>{de324f56-1d35-47ae-ab1d-b28ed1b356a8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="plugin.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\plugin\bakkesmodplugin.h">
+      <Filter>bakkesmod-sdk\bakkesmod\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\plugin\bakkesmodsdk.h">
+      <Filter>bakkesmod-sdk\bakkesmod\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\plugin\botplugin.h">
+      <Filter>bakkesmod-sdk\bakkesmod\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\plugin\pluginwindow.h">
+      <Filter>bakkesmod-sdk\bakkesmod\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\arraywrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\canvaswrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\cvarmanagerwrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\cvarwrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\includes.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\linmath.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\MMRWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\PlayerControllerWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\PluginManagerWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\ReplayServerWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\replaywrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\StructArrayWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\wrapperstructs.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\Engine\ActorWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\Engine\EngineTAWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\Engine\ObjectWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\Engine\UnrealStringWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\GameEditorWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\GameEventWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\GameSettingPlaylistWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\ReplayDirectorWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\ReplaySoccarWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\ReplayWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\ServerWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\TeamGameEventWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\TrainingEditorWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\TutorialWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\SaveData\GameEditorSaveDataWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent\SaveData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\SaveData\SaveDataWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent\SaveData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\SaveData\TrainingEditorSaveDataWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameEvent\SaveData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\BallWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\BaseCameraWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\BoostPickupWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CameraWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CameraXWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\FXActorWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\GoalWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PhysicalMaterialPropertyWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PlayerReplicationInfoWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PriWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PriXWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RBActorWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\TeamInfoWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\TeamWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\VehiclePickupWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\VehicleWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\AirControlComponentWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\BoostWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\CarComponentWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\DodgeComponentWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\DoubleJumpComponentWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\FlipCarComponentWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\JumpComponentWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\PrimitiveComponentWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\VehicleSimWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\WheelWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\CarComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\InputBufferGraphWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\PerformanceStats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\NetStatGraphWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\PerformanceStats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\PerfStatGraphWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\PerformanceStats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\SampleHistoryWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\PerformanceStats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\SampleRecordSettingsWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\PerformanceStats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\StartGraphSystemWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\PerformanceStats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\StatGraphSystemWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\PerformanceStats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\StatGraphWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\PerformanceStats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\AttachmentPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BallCarSpringPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BallFreezePickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BallLassoPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BasketballPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BattarangPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BoostModPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BoostOverridePickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\CarSpeedPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\DemolishPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\GrapplingHookPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\GravityPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\HandbrakeOverridePickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\HitForcePickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\RumblePickupComponentWrapper.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\SpringPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\SwapperPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\TargetedPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\TimeBombPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\TornadoPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\VelcroPickup.h">
+      <Filter>bakkesmod-sdk\bakkesmod\wrappers\GameObject\RumbleComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\customrotator.h">
+      <Filter>bakkesmod-sdk\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\finiteelement.h">
+      <Filter>bakkesmod-sdk\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\io.h">
+      <Filter>bakkesmod-sdk\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\observer.h">
+      <Filter>bakkesmod-sdk\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\parser.h">
+      <Filter>bakkesmod-sdk\utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="stealthplugin.set" />
+  </ItemGroup>
+</Project>

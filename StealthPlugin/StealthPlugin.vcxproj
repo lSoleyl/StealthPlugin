@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{42C9E168-95E7-4509-909B-4E25D573895C}</ProjectGuid>
+    <RootNamespace>rlstealth</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>StealthPlugin</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(SolutionDir)bakkesmod-sdk\lib\</LibraryPath>
+    <OutDir>$(SolutionDir)Output\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Int\$(Configuration)\</IntDir>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)bakkesmod-sdk\include\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>bakkesmod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="plugin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\plugin\bakkesmodplugin.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\plugin\bakkesmodsdk.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\plugin\botplugin.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\plugin\pluginwindow.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\arraywrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\canvaswrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\cvarmanagerwrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\cvarwrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\Engine\ActorWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\Engine\EngineTAWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\Engine\ObjectWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\Engine\UnrealStringWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\GameEditorWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\GameEventWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\GameSettingPlaylistWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\ReplayDirectorWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\ReplaySoccarWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\ReplayWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\SaveData\GameEditorSaveDataWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\SaveData\SaveDataWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\SaveData\TrainingEditorSaveDataWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\ServerWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\TeamGameEventWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\TrainingEditorWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameEvent\TutorialWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\BallWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\BaseCameraWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\BoostPickupWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CameraWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CameraXWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\AirControlComponentWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\BoostWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\CarComponentWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\DodgeComponentWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\DoubleJumpComponentWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\FlipCarComponentWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\JumpComponentWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\PrimitiveComponentWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\VehicleSimWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarComponent\WheelWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\CarWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\FXActorWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\GoalWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\InputBufferGraphWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\NetStatGraphWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\PerfStatGraphWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\SampleHistoryWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\SampleRecordSettingsWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\StartGraphSystemWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\StatGraphSystemWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PerformanceStats\StatGraphWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PhysicalMaterialPropertyWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PlayerReplicationInfoWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PriWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\PriXWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RBActorWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\AttachmentPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BallCarSpringPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BallFreezePickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BallLassoPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BasketballPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BattarangPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BoostModPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\BoostOverridePickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\CarSpeedPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\DemolishPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\GrapplingHookPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\GravityPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\HandbrakeOverridePickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\HitForcePickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\RumblePickupComponentWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\SpringPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\SwapperPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\TargetedPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\TimeBombPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\TornadoPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\RumbleComponent\VelcroPickup.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\TeamInfoWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\TeamWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\VehiclePickupWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameObject\VehicleWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\GameWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\includes.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\linmath.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\MMRWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\PlayerControllerWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\PluginManagerWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\ReplayServerWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\replaywrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\StructArrayWrapper.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\bakkesmod\wrappers\wrapperstructs.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\customrotator.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\finiteelement.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\io.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\observer.h" />
+    <ClInclude Include="..\bakkesmod-sdk\include\utils\parser.h" />
+    <ClInclude Include="plugin.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="stealthplugin.set">
+      <FileType>Document</FileType>
+      <Command>COPY /Y "%(FullPath)" "$(OutDir)settings\"</Command>
+      <Message>Copying settings file to $(OutDir)settings\</Message>
+      <LinkObjects>false</LinkObjects>
+      <Outputs>$(OutDir)settings\%(Identity)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
