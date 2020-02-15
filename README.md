@@ -7,4 +7,4 @@ This project is a Plugin for [Bakkesmod](https://bakkesmod.com/), which adds a n
 Required VisualStudio version is at least VS2015. To build this project with a newer version, the v140 platform toolset needs to be installed. Just build the projct with the default configuration and the `StealthPlugin.dll` and settings file will be located in the `Output\Release` directory.
 
 ## Install instructions
-Just copy the contents of the release .zip file into your bakkesmod folder (located where your `Binaries\Win32\RocketLeague.exe` is).
+Just copy the contents of the [release .zip](https://github.com/lSoleyl/StealthPlugin/releases/download/v1.0/StealthPlugin.zip) file into your bakkesmod folder (located where your `Binaries\Win32\RocketLeague.exe` is).
