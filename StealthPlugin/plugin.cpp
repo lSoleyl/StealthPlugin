@@ -3,7 +3,7 @@
 #include <sstream>
 #include <regex>
 
-BAKKESMOD_PLUGIN(StealthPlugin, "Stealth plugin", "1.0", PLUGINTYPE_FREEPLAY | PLUGINTYPE_CUSTOM_TRAINING)
+BAKKESMOD_PLUGIN(StealthPlugin, "Stealth plugin", "1.1", PLUGINTYPE_FREEPLAY | PLUGINTYPE_CUSTOM_TRAINING)
 
 
 // Debugging helper
