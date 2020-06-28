@@ -54,6 +54,18 @@ private:
   std::pair<float, float> boostRange;
 
 
+
+  /** This helper function is my deperate attempt to prevent RL from crashing right after a player
+   *  joins the game. I looked into the crashdumps and it crashes inside BoostWrapper::GetPercentBoostFull() 
+   *  because some pointer is null, so I want to check this beforehand.
+   *
+   * @param boostComponent a car's boost component
+   *
+   * @return true if the component seems to be valid, false otherwise
+   */
+  static bool isBoostComponentValid(const BoostWrapper& boostComponent);
+
+
   /** State enum to properly handle the plugin statethe plugin and to not accidentially
    *  start multiple timeouts when disabling/enabling the plugin quickly.
    */

@@ -3,6 +3,9 @@
 #include <sstream>
 #include <regex>
 
+#define TRUE 1
+#define FALSE 0
+
 BAKKESMOD_PLUGIN(StealthPlugin, "Stealth plugin", "1.1", PLUGINTYPE_FREEPLAY | PLUGINTYPE_CUSTOM_TRAINING)
 
 
@@ -27,14 +30,21 @@ void StealthPlugin::applyStealth() {
   for (int i = 0; i < cars.Count(); ++i) {
     auto car = cars.Get(i);
 
-    // What is the difference between GetPercentBoostFull() and GetCurrentBoostAmount() !?
-    auto boostAmount = car.GetBoostComponent().GetPercentBoostFull(); // a value between 0 and 1 (incl.)
-    if (boostRange.first <= boostAmount && boostAmount <= boostRange.second) {
-      car.SetHidden2(TRUE);
-      car.SetbHiddenSelf(TRUE);
-    } else {
-      car.SetHidden2(FALSE);
-      car.SetbHiddenSelf(FALSE);
+    // The check with isBoostComponentValid() is just a workaround for crashes, which I noticed seem to 
+    // happen after a player joins into a running match... I don't know why this happens, but the boost component
+    // seems to be incomplete/invalid... Debugging crash dumps suggests, that an internal pointer is null, for which I now check.
+    auto boostComponent = car.GetBoostComponent();
+    if (isBoostComponentValid(boostComponent)) {
+
+      // What is the difference between GetPercentBoostFull() and GetCurrentBoostAmount() !?
+      auto boostAmount = boostComponent.GetPercentBoostFull(); // a value between 0 and 1 (incl.)
+      if (boostRange.first <= boostAmount && boostAmount <= boostRange.second) {
+        car.SetHidden2(TRUE);
+        car.SetbHiddenSelf(TRUE);
+      } else {
+        car.SetHidden2(FALSE);
+        car.SetbHiddenSelf(FALSE);
+      }
     }
   }
 }
@@ -126,6 +136,25 @@ void StealthPlugin::updateEnabledState(bool enabled) {
     }
     // otherwise do nothing.
   }
+}
+
+bool StealthPlugin::isBoostComponentValid(const BoostWrapper& boostComponent) {
+  
+  // These structs are used to mimic the datastructure, which is accessed by GetBoostPercentageFull()
+  struct BoostWrapperDummy {
+    struct BoostImplDummy {
+      void* internals; // <- this pointer was nullptr in the observed crashes.
+    };
+
+    uint8_t unnamed[18]; 
+    BoostImplDummy* boostImpl;
+  };
+
+  if (auto boostImpl = reinterpret_cast<const BoostWrapperDummy&>(boostComponent).boostImpl) {
+    return boostImpl->internals != nullptr;
+  }
+
+  return false;
 }
 
 
