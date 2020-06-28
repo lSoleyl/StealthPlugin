@@ -146,7 +146,7 @@ bool StealthPlugin::isBoostComponentValid(const BoostWrapper& boostComponent) {
       void* internals; // <- this pointer was nullptr in the observed crashes.
     };
 
-    uint8_t unnamed[18]; 
+    uint8_t unnamed[0x18]; 
     BoostImplDummy* boostImpl;
   };
 
