@@ -6,12 +6,12 @@
 #define TRUE 1
 #define FALSE 0
 
-BAKKESMOD_PLUGIN(StealthPlugin, "Stealth plugin", "1.1", PLUGINTYPE_FREEPLAY | PLUGINTYPE_CUSTOM_TRAINING)
+BAKKESMOD_PLUGIN(StealthPlugin, "Stealth plugin", "1.3", PLUGINTYPE_FREEPLAY | PLUGINTYPE_CUSTOM_TRAINING)
 
 
 // Debugging helper
-#define OutputDebugStream(msg) do { std::ostringstream str; str << std::boolalpha << msg; cvarManager->log(str.str()); } while(false)
-//#define OutputDebugStream(msg)
+//#define OutputDebugStream(msg) do { std::ostringstream str; str << std::boolalpha << msg; cvarManager->log(str.str()); } while(false)
+#define OutputDebugStream(msg)
 
 
 const float StealthPlugin::ACTIVE_TICK_DURATION = 0.1f; // 10 ticks per second
@@ -25,25 +25,22 @@ bool StealthPlugin::shouldApplyStealth() const {
 }
 
 void StealthPlugin::applyStealth() {
-  auto cars = gameWrapper->GetGameEventAsServer().GetCars();
+  if (auto event = gameWrapper->GetGameEventAsServer()) {
+    auto cars = event.GetCars();
 
-  for (int i = 0; i < cars.Count(); ++i) {
-    auto car = cars.Get(i);
-
-    // The check with isBoostComponentValid() is just a workaround for crashes, which I noticed seem to 
-    // happen after a player joins into a running match... I don't know why this happens, but the boost component
-    // seems to be incomplete/invalid... Debugging crash dumps suggests, that an internal pointer is null, for which I now check.
-    auto boostComponent = car.GetBoostComponent();
-    if (isBoostComponentValid(boostComponent)) {
-
-      // What is the difference between GetPercentBoostFull() and GetCurrentBoostAmount() !?
-      auto boostAmount = boostComponent.GetPercentBoostFull(); // a value between 0 and 1 (incl.)
-      if (boostRange.first <= boostAmount && boostAmount <= boostRange.second) {
-        car.SetHidden2(TRUE);
-        car.SetbHiddenSelf(TRUE);
-      } else {
-        car.SetHidden2(FALSE);
-        car.SetbHiddenSelf(FALSE);
+    for (int i = 0; i < cars.Count(); ++i) {
+      if (auto car = cars.Get(i)) {
+        if (auto boostComponent = car.GetBoostComponent()) {
+          // What is the difference between GetPercentBoostFull() and GetCurrentBoostAmount() !?
+          auto boostAmount = boostComponent.GetPercentBoostFull(); // a value between 0 and 1 (incl.)
+          if (boostRange.first <= boostAmount && boostAmount <= boostRange.second) {
+            car.SetHidden2(TRUE);
+            car.SetbHiddenSelf(TRUE);
+          } else {
+            car.SetHidden2(FALSE);
+            car.SetbHiddenSelf(FALSE);
+          }
+        }
       }
     }
   }
@@ -51,12 +48,15 @@ void StealthPlugin::applyStealth() {
 
 void StealthPlugin::showAllCars() {
   if (shouldApplyStealth()) {
-    auto cars = gameWrapper->GetGameEventAsServer().GetCars();
+    if (auto event = gameWrapper->GetGameEventAsServer()) {
+      auto cars = event.GetCars();
 
-    for (int i = 0; i < cars.Count(); ++i) {
-      auto car = cars.Get(i);
-      car.SetHidden2(FALSE);
-      car.SetbHiddenSelf(FALSE);
+      for (int i = 0; i < cars.Count(); ++i) {
+        if (auto car = cars.Get(i)) {
+          car.SetHidden2(FALSE);
+          car.SetbHiddenSelf(FALSE);
+        }
+      }
     }
   }
 }
@@ -137,26 +137,6 @@ void StealthPlugin::updateEnabledState(bool enabled) {
     // otherwise do nothing.
   }
 }
-
-bool StealthPlugin::isBoostComponentValid(const BoostWrapper& boostComponent) {
-  
-  // These structs are used to mimic the datastructure, which is accessed by GetBoostPercentageFull()
-  struct BoostWrapperDummy {
-    struct BoostImplDummy {
-      void* internals; // <- this pointer was nullptr in the observed crashes.
-    };
-
-    uint8_t unnamed[0x18]; 
-    BoostImplDummy* boostImpl;
-  };
-
-  if (auto boostImpl = reinterpret_cast<const BoostWrapperDummy&>(boostComponent).boostImpl) {
-    return boostImpl->internals != nullptr;
-  }
-
-  return false;
-}
-
 
 void StealthPlugin::onLoad() {
   // Register cvar to make the boost stealth range configurable
